@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Message Board</title>
+  </head>
+  <body>
+    <h1>Simple Message Board</h1>
+    <form method="post">
+      <input type="text" name="message" placeholder="Enter a message" />
+      <input type="submit" value="Post" />
+    </form>
+    <ul>
+      {% for message in messages %}
+      <li>{{ message.decode() }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

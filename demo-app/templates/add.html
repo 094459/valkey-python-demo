@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Board</title>
+</head>
+<body>
+    <h1>Message Board</h1>
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('add_message') }}" method="post">
+        <input type="text" name="message" placeholder="Enter a message">
+        <input type="submit" value="Add Message">
+    </form>
+</body>
+</html>
